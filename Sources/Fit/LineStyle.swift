@@ -31,6 +31,7 @@ public enum LineAlignment {
 /// }
 /// ```
 ///
+@available(iOS 16.0, *)
 public struct LineStyle {
     
     public var alignment: LineAlignment = .leading

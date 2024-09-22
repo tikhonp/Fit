@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+@available(iOS 16.0, *)
 extension Fit {
     
     /// Cache for ``Fit`` implementation of Layout protocol.

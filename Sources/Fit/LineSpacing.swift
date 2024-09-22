@@ -15,6 +15,7 @@ import SwiftUI
 /// let spacing: LineSpacing = 8    // .fixed(8)
 /// let spacing: LineSpacing = 10.5 // .fixed(10.5)
 /// ```
+@available(iOS 16.0, *)
 public enum LineSpacing: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral {
     /// Uses **ViewSpacing** distance to determine preferred spacing, but not less then specified minimum.
     case viewSpacing(minimum: CGFloat)

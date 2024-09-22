@@ -14,6 +14,7 @@ import SwiftUI
 /// }
 /// ```
 ///
+@available(iOS 16.0, *)
 public struct Fit {
 
     public let lineStyle: LineStyle

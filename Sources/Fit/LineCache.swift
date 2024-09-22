@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+@available(iOS 16.0, *)
 extension Fit.LayoutCache {
     
     /// Represents the group of items forming the line.
@@ -52,7 +52,7 @@ extension Fit.LayoutCache {
             itemAlignment = alignment
             
             let itemBaseline = dimensions[alignment]
-
+            
             baseline = Baseline(initial: itemBaseline, itemHeight: dimensions.height)
             lineHeight = baseline.height
             
@@ -63,7 +63,7 @@ extension Fit.LayoutCache {
             
             firstItemDimensions = dimensions
             lastItemDimensions = dimensions
-
+            
             self.availableSpaceOffered = availableSpace
             self.availableSpace = max(0, availableSpace - dimensions.width)
             
@@ -80,7 +80,7 @@ extension Fit.LayoutCache {
         ) -> Bool {
             let distance = spacingRule.distance(between: lastItemSpacing, and: spacing)
             let spaceOccupied = distance + dimensions.width
-
+            
             guard spaceOccupied <= availableSpace else { return false }
             
             indices.append(itemIndex)
@@ -112,6 +112,7 @@ extension Fit.LayoutCache {
     }
 }
 
+@available(iOS 16.0, *)
 extension Fit.LayoutCache.Line {
     struct Baseline {
         private(set) var highest: CGFloat

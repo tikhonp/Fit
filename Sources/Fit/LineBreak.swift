@@ -8,6 +8,7 @@
 import SwiftUI
 
 
+@available(iOS 16.0, *)
 struct LineBreakKey: LayoutValueKey {
     static let defaultValue: LineBreak? = nil
 }
@@ -25,6 +26,7 @@ struct LineBreakKey: LayoutValueKey {
 ///     }
 /// }
 /// ```
+@available(iOS 16.0, *)
 public struct LineBreak {
     
     let after: Bool
@@ -41,6 +43,7 @@ public struct LineBreak {
     }
 }
 
+@available(iOS 16.0, *)
 extension LineBreak {
     
     public static let noBreak = LineBreak(after: false, condition: { _ in false })
@@ -66,6 +69,7 @@ extension LineBreak {
     
 }
 
+@available(iOS 16.0, *)
 public extension LineBreak.LineInfo {
     /// Number of items added so far.
     var itemsAdded: Int { indices.count }
@@ -74,6 +78,7 @@ public extension LineBreak.LineInfo {
     var percentageFilled: Double { lineLength / availableSpaceOffered }
 }
 
+@available(iOS 16.0, *)
 public extension View {
     
     /// Attaches a line brake demand to the view in the ``Fit`` layout.
